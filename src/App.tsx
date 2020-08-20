@@ -1,17 +1,21 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 import Navbar from './components/Navbar'
 
 function App () {
+  useEffect(() => {
+    console.log(process.env);
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
-          {process.env.ENVIROMENT}
+          {process.env.REACT_APP_ENVIROMENT}
         </p>
         <Navbar name= 'name' />
         <a
