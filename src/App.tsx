@@ -1,12 +1,13 @@
 import React,{useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {env} from './contants/api.constant'
 
 import Navbar from './components/navbar'
 
 function App () {
   useEffect(() => {
-    console.log(process.env);
+    console.log(env);
   }, [])
 
   return (
