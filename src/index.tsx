@@ -1,13 +1,20 @@
-import React from 'react';
+import React,{Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './styles/main.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { Provider } from "react-redux";
+import store from "./flux/store";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={"loanding..."}>
+      <Provider store={store}>
+        <App /> 
+      </Provider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
