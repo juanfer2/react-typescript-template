@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar'
 
 function App () {
   useEffect(() => {
